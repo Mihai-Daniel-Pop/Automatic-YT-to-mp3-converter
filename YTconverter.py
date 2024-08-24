@@ -6,8 +6,8 @@ from tkinter import *
 # Function to handle placeholder text
 def on_entry_click(event):
     if query.get() == placeholder:
-        query.delete(0, END)  # delete all the text in the entry
-        query.config(fg='black')  # change the text color to black
+        query.delete(0, END)  
+        query.config(fg='black')  
     query.bind("<FocusOut>", on_focus_out)
 
 def on_focus_out(event):
@@ -18,8 +18,8 @@ def on_focus_out(event):
 
 def submit():
     global yt_query
-    yt_query = query.get()  # store the entry text
-    root.destroy()  # close the Tkinter window
+    yt_query = query.get()  
+    root.destroy()  
 
 # Tkinter GUI setup
 root = Tk()
